@@ -11,7 +11,7 @@ export async function validate(request: FastifyRequest, reply: FastifyReply) {
 
   const validateCheckInUseCase = makeValidateCheckInUseCase()
 
-  validateCheckInUseCase.execute({
+  await validateCheckInUseCase.execute({
     checkInId,
   })
 
